@@ -210,9 +210,11 @@
         <p class="font-bold">
           ACME Industries Ltd.
           <br />
-          Providing reliable tech since 1992
+          Providing reliable tech since 2026
         </p>
-        <p>Copyright © <?= date("Y") ?> - All right reserved</p>
+        <p id="year-copyright">
+          Copyright © <?= date("Y") ?> - All right reserved
+        </p>
       </aside>
       <nav>
         <div class="grid grid-flow-col gap-4">
@@ -252,5 +254,10 @@
         </div>
       </nav>
     </footer>
+    <script>
+      const yearCopyright = document.querySelector("#year-copyright");
+      const year = new Date().getFullYear();
+      yearCopyright.innerText = `Copyright © ${year} - All right reserved`;
+    </script>
   </body>
 </html>
